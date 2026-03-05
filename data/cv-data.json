@@ -1,0 +1,297 @@
+{
+  "personal": {
+    "nombre": "Gabriel Zavarse",
+    "titulo": "Ingeniero de Software | Desarrollador Full Stack | Especialista en Infraestructura de Telecomunicaciones",
+    "ubicacion": "Estado de México, México",
+    "disponibilidad": "Disponible para presencial, remoto y proyectos híbridos",
+    "email": "zavarsegabriel@gmail.com",
+    "telefono": "+52 563 711 3563",
+    "linkedin": "https://linkedin.com/in/gabriel-zavarse",
+    "github": "https://github.com/Gaboozc",
+    "descripcion": "Ingeniero de software Full Stack con experiencia en el desarrollo de aplicaciones web modernas utilizando Python, JavaScript, React, Flask y Supabase. Especializado en el diseño de APIs REST, autenticación segura con JWT y gestión de bases de datos PostgreSQL. Con una sólida experiencia en infraestructura de telecomunicaciones y sistemas de baja tensión, incluyendo despliegue de fibra óptica, cableado estructurado y arquitectura de redes."
+  },
+  "experiencia": [
+    {
+      "id": "exp1",
+      "puesto": "Ingeniero de Software (Freelance)",
+      "empresa": "Fenix Group",
+      "periodo": "2024",
+      "descripcion": "Desarrollo de aplicaciones web full stack utilizando React, Flask y Supabase. Diseño de APIs REST escalables y sistemas de autenticación seguros.",
+      "logros": [
+        "Desarrollo de aplicaciones web completas con arquitectura moderna",
+        "Diseño de APIs REST escalables para aplicaciones web",
+        "Implementación de sistemas de autenticación seguros utilizando JWT",
+        "Diseño y gestión de bases de datos PostgreSQL"
+      ],
+      "tecnologias": ["React", "Flask", "Python", "Supabase", "PostgreSQL", "JWT"],
+      "hotspots": [
+        {
+          "id": "hs1",
+          "titulo": "APIs REST",
+          "descripcion": "Diseño e implementación de APIs escalables con Flask y autenticación JWT",
+          "icono": "code",
+          "posicion": { "x": 20, "y": 30 }
+        },
+        {
+          "id": "hs2",
+          "titulo": "Autenticación JWT",
+          "descripcion": "Sistema de autenticación seguro con tokens y refresh tokens",
+          "icono": "shield",
+          "posicion": { "x": 60, "y": 45 }
+        }
+      ]
+    },
+    {
+      "id": "exp2",
+      "puesto": "Ingeniero de Software (Freelance)",
+      "empresa": "Sean LeCreatif",
+      "periodo": "2024",
+      "descripcion": "Desarrollo de aplicaciones web y herramientas internas. Implementación de interfaces modernas con React e integración de APIs y sistemas backend.",
+      "logros": [
+        "Desarrollo de aplicaciones web con interfaces modernas",
+        "Implementación de funcionalidades frontend con React",
+        "Integración de APIs y sistemas backend",
+        "Desarrollo de herramientas internas para optimización de procesos"
+      ],
+      "tecnologias": ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+      "hotspots": [
+        {
+          "id": "hs3",
+          "titulo": "Interfaces Modernas",
+          "descripcion": "Desarrollo de UIs responsivas y optimizadas con React",
+          "icono": "layout",
+          "posicion": { "x": 40, "y": 50 }
+        }
+      ]
+    },
+    {
+      "id": "exp3",
+      "puesto": "Ingeniero de Software (Freelance)",
+      "empresa": "AlphaDev",
+      "periodo": "2024",
+      "descripcion": "Desarrollo de aplicaciones full stack. Diseño de arquitectura backend y gestión de bases de datos. Implementación de funcionalidades escalables.",
+      "logros": [
+        "Desarrollo de aplicaciones full stack completas",
+        "Diseño de arquitectura backend robusta",
+        "Gestión eficiente de bases de datos PostgreSQL",
+        "Implementación de funcionalidades escalables para aplicaciones web"
+      ],
+      "tecnologias": ["Python", "Flask", "React", "PostgreSQL", "SQLAlchemy"],
+      "hotspots": [
+        {
+          "id": "hs4",
+          "titulo": "Arquitectura Backend",
+          "descripcion": "Diseño de sistemas backend escalables con Flask y PostgreSQL",
+          "icono": "server",
+          "posicion": { "x": 25, "y": 35 }
+        }
+      ]
+    },
+    {
+      "id": "exp4",
+      "puesto": "Mentor",
+      "empresa": "4Geeks Academy",
+      "periodo": "2024",
+      "descripcion": "Mentoría a estudiantes en desarrollo Full Stack. Asistencia en debugging, arquitectura de proyectos y buenas prácticas de programación.",
+      "logros": [
+        "Mentoría de múltiples estudiantes en desarrollo Full Stack",
+        "Asistencia en debugging y resolución de problemas complejos",
+        "Enseñanza de arquitectura de proyectos y patrones de diseño",
+        "Apoyo en el desarrollo de aplicaciones con React, Flask y APIs"
+      ],
+      "tecnologias": ["React", "Flask", "Python", "JavaScript", "APIs REST"],
+      "hotspots": [
+        {
+          "id": "hs5",
+          "titulo": "Mentoría Técnica",
+          "descripcion": "Guía en mejores prácticas y patrones de desarrollo",
+          "icono": "users",
+          "posicion": { "x": 55, "y": 40 }
+        }
+      ]
+    },
+    {
+      "id": "exp5",
+      "puesto": "Lead Technician",
+      "empresa": "Wiring Technologie Inc",
+      "periodo": "2020 - 2024",
+      "ubicacion": "Orlando, Estados Unidos",
+      "descripcion": "Diseño y despliegue de infraestructura de telecomunicaciones. Instalación de sistemas de fibra óptica, coaxial y cableado estructurado.",
+      "logros": [
+        "Diseño y despliegue de infraestructura de telecomunicaciones completa",
+        "Instalación de sistemas de fibra óptica y cableado estructurado",
+        "Configuración de salas de red MDF / IDF",
+        "Pruebas de fibra utilizando OTDR y equipos de empalme por fusión",
+        "Liderazgo de operaciones técnicas en campo"
+      ],
+      "tecnologias": ["OTDR", "Fusion Splicing", "Cat5e/Cat6", "Fibra Óptica", "MDF/IDF"],
+      "hotspots": [
+        {
+          "id": "hs6",
+          "titulo": "Infraestructura de Red",
+          "descripcion": "Diseño completo de salas MDF/IDF y cableado estructurado",
+          "icono": "network",
+          "posicion": { "x": 30, "y": 55 }
+        },
+        {
+          "id": "hs7",
+          "titulo": "Fibra Óptica",
+          "descripcion": "Testing OTDR y fusion splicing de fibra óptica",
+          "icono": "zap",
+          "posicion": { "x": 70, "y": 40 }
+        }
+      ]
+    }
+  ],
+  "educacion": [
+    {
+      "id": "edu1",
+      "titulo": "Full Stack Development Bootcamp",
+      "institucion": "4Geeks Academy",
+      "periodo": "2024",
+      "descripcion": "Formación intensiva en desarrollo Full Stack con React, Flask, Python, PostgreSQL y APIs REST",
+      "destacado": true
+    },
+    {
+      "id": "edu2",
+      "titulo": "Formación en Infraestructura de Telecomunicaciones",
+      "institucion": "Certificación Profesional",
+      "periodo": "2020-2022",
+      "descripcion": "Especialización en fibra óptica, OTDR testing, fusion splicing y cableado estructurado"
+    }
+  ],
+  "certificaciones": [
+    {
+      "nombre": "Full Stack Development",
+      "emisor": "4Geeks Academy",
+      "año": "2024"
+    },
+    {
+      "nombre": "OTDR Testing & Fusion Splicing",
+      "emisor": "Certificación Profesional",
+      "año": "2022"
+    },
+    {
+      "nombre": "Structured Cabling (Cat5e/Cat6)",
+      "emisor": "Certificación Profesional",
+      "año": "2022"
+    }
+  ],
+  "habilidades": {
+    "frontend": [
+      { "nombre": "React.js", "nivel": 90, "años": 3 },
+      { "nombre": "JavaScript", "nivel": 90, "años": 3 },
+      { "nombre": "HTML5", "nivel": 95, "años": 3 },
+      { "nombre": "CSS3", "nivel": 90, "años": 3 },
+      { "nombre": "Bootstrap", "nivel": 85, "años": 3 }
+    ],
+    "backend": [
+      { "nombre": "Python", "nivel": 90, "años": 3 },
+      { "nombre": "Flask", "nivel": 90, "años": 3 },
+      { "nombre": "APIs REST", "nivel": 90, "años": 3 },
+      { "nombre": "JWT", "nivel": 85, "años": 3 },
+      { "nombre": "Supabase", "nivel": 85, "años": 3 }
+    ],
+    "databases": [
+      { "nombre": "PostgreSQL", "nivel": 90, "años": 3 },
+      { "nombre": "Supabase", "nivel": 85, "años": 3 },
+      { "nombre": "SQLAlchemy", "nivel": 85, "años": 3 },
+      { "nombre": "SQL", "nivel": 90, "años": 3 }
+    ],
+    "devops": [
+      { "nombre": "Git", "nivel": 90, "años": 3 },
+      { "nombre": "GitHub", "nivel": 90, "años": 3 },
+      { "nombre": "Jest", "nivel": 75, "años": 3 }
+    ],
+    "infraestructura": [
+      { "nombre": "Fibra Óptica", "nivel": 95, "años": 7 },
+      { "nombre": "OTDR Testing", "nivel": 95, "años": 7 },
+      { "nombre": "Fusion Splicing", "nivel": 95, "años": 7 },
+      { "nombre": "Cableado Estructurado", "nivel": 95, "años": 7 },
+      { "nombre": "MDF / IDF", "nivel": 90, "años": 7 }
+    ],
+    "blandas": [
+      "Mentoría y enseñanza",
+      "Trabajo en equipo",
+      "Resolución de problemas",
+      "Liderazgo técnico",
+      "Comunicación efectiva",
+      "Gestión de proyectos"
+    ],
+    "idiomas": [
+      { "idioma": "Español", "nivel": "Fluido / Nativo" },
+      { "idioma": "Inglés", "nivel": "Fluido / Profesional" }
+    ]
+  },
+  "proyectos": [
+    {
+      "id": "proj1",
+      "nombre": "ATHENEA",
+      "descripcion": "Plataforma de gestión avanzada adaptada a perfiles individuales. Sistema modular con componentes React y lógica de estado optimizada para dashboards y software de gestión.",
+      "tecnologias": ["React", "JavaScript", "Estado Modular", "Componentes Reutilizables"],
+      "imagen": "/projects/athenea.jpg",
+      "url": "https://github.com/Gaboozc/ATHENEA/tree/single-person",
+      "destacado": true,
+      "hotspots": [
+        {
+          "id": "phs1",
+          "titulo": "Arquitectura Modular",
+          "descripcion": "Sistema de componentes reutilizables con gestión de estado avanzada",
+          "icono": "layers",
+          "posicion": { "x": 30, "y": 40 }
+        }
+      ]
+    },
+    {
+      "id": "proj2",
+      "nombre": "Kzair Services",
+      "descripcion": "Landing page optimizada para servicios industriales y técnicos. Diseño enfocado en conversión y captación de clientes con estrategia comercial integrada.",
+      "tecnologias": ["HTML5", "CSS3", "JavaScript", "Landing Page", "Optimización de Conversión"],
+      "imagen": "/projects/kzair.jpg",
+      "url": "https://github.com/Gaboozc/Kzairservices",
+      "destacado": true
+    },
+    {
+      "id": "proj3",
+      "nombre": "CFNmx",
+      "descripcion": "Portal informativo e institucional con estructura profesional y corporativa. Arquitectura de información optimizada para navegación intuitiva y SEO.",
+      "tecnologias": ["HTML5", "CSS3", "SEO", "Arquitectura de Información", "Sitio Corporativo"],
+      "imagen": "/projects/cfnmx.jpg",
+      "url": "https://github.com/Gaboozc/CFNmx",
+      "hotspots": [
+        {
+          "id": "phs2",
+          "titulo": "Estructura SEO",
+          "descripcion": "Optimización completa de contenido y estructura para motores de búsqueda",
+          "icono": "database",
+          "posicion": { "x": 50, "y": 45 }
+        }
+      ]
+    },
+    {
+      "id": "proj4",
+      "nombre": "Barbería Imperial V2",
+      "descripcion": "Sitio web premium con enfoque en diseño visual y experiencia de usuario. Carta de presentación especializada en estética, branding y UI de alto impacto.",
+      "tecnologias": ["HTML5", "CSS3", "JavaScript", "UI/UX", "Branding"],
+      "imagen": "/projects/barberia.jpg",
+      "url": "https://github.com/Gaboozc/barberiaImperialM/tree/mainV2"
+    },
+    {
+      "id": "proj5",
+      "nombre": "MoneyTracker",
+      "descripcion": "App de finanzas personales con gestión avanzada de ingresos y gastos. Lógica compleja de transacciones, categorización automática y reportes detallados con MERN Stack.",
+      "tecnologias": ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
+      "imagen": "/projects/moneytracker.jpg",
+      "url": "https://github.com/Gaboozc/MoneyTracker",
+      "hotspots": [
+        {
+          "id": "phs3",
+          "titulo": "MERN Architecture",
+          "descripcion": "Stack completo con MongoDB para persistencia y Express/Node para backend",
+          "icono": "bar-chart",
+          "posicion": { "x": 40, "y": 50 }
+        }
+      ]
+    }
+  ]
+}
