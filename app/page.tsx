@@ -23,7 +23,7 @@ import {
 } from '@/components/CVPagesExtended';
 
 export default function Home() {
-  const { currentPage } = useMagazineStore();
+  const { currentPage, language } = useMagazineStore();
   
   const pages = [
     <CoverPage key="cover" />,
@@ -81,7 +81,7 @@ export default function Home() {
                    shadow-lg z-50 border border-gray-200"
       >
         <span className="font-mono text-sm font-semibold text-gray-700">
-          Página {currentPage + 1} de {pages.length}
+          {language === 'es' ? 'Pagina' : 'Page'} {currentPage + 1} {language === 'es' ? 'de' : 'of'} {pages.length}
         </span>
       </div>
     </div>

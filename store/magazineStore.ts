@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+export type AppLanguage = 'en' | 'es';
+
 interface MagazineState {
   currentPage: number;
   totalPages: number;
@@ -7,6 +9,7 @@ interface MagazineState {
   targetPage: number | null;
   activeTab: string;
   showHotspot: string | null;
+  language: AppLanguage;
   setCurrentPage: (page: number) => void;
   nextPage: () => void;
   prevPage: () => void;
@@ -14,6 +17,7 @@ interface MagazineState {
   setFlipping: (flipping: boolean) => void;
   setActiveTab: (tab: string) => void;
   setShowHotspot: (hotspotId: string | null) => void;
+  setLanguage: (language: AppLanguage) => void;
 }
 
 export const useMagazineStore = create<MagazineState>((set, get) => ({
@@ -23,6 +27,7 @@ export const useMagazineStore = create<MagazineState>((set, get) => ({
   targetPage: null,
   activeTab: 'inicio',
   showHotspot: null,
+  language: 'en',
 
   setCurrentPage: (page) => set({ currentPage: page, isFlipping: false, targetPage: null }),
 
@@ -52,4 +57,6 @@ export const useMagazineStore = create<MagazineState>((set, get) => ({
   setActiveTab: (tab) => set({ activeTab: tab }),
 
   setShowHotspot: (hotspotId) => set({ showHotspot: hotspotId }),
+
+  setLanguage: (language) => set({ language }),
 }));

@@ -14,7 +14,7 @@ interface HotspotModalProps {
 }
 
 export default function HotspotModal({ hotspot }: HotspotModalProps) {
-  const { showHotspot, setShowHotspot } = useMagazineStore();
+  const { showHotspot, setShowHotspot, language } = useMagazineStore();
   const isOpen = showHotspot === hotspot.id;
 
   return (
@@ -56,7 +56,7 @@ export default function HotspotModal({ hotspot }: HotspotModalProps) {
                 className="w-full bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 
                            transition-colors font-medium"
               >
-                Cerrar
+                {language === 'es' ? 'Cerrar' : 'Close'}
               </button>
             </div>
           </motion.div>

@@ -1,0 +1,297 @@
+{
+  "personal": {
+    "nombre": "Gabriel Zavarse",
+    "titulo": "Software Engineer | Full Stack Developer | Telecommunications Infrastructure Specialist",
+    "ubicacion": "State of Mexico, Mexico",
+    "disponibilidad": "Available for on-site, remote, and hybrid projects",
+    "email": "zavarsegabriel@gmail.com",
+    "telefono": "+52 563 711 3563",
+    "linkedin": "https://linkedin.com/in/gabriel-zavarse",
+    "github": "https://github.com/Gaboozc",
+    "descripcion": "Full Stack software engineer with experience building modern web applications using Python, JavaScript, React, Flask, and Supabase. Specialized in REST API design, secure JWT authentication, and PostgreSQL database management. Backed by solid experience in telecommunications infrastructure and low-voltage systems, including fiber optic deployment, structured cabling, and network architecture."
+  },
+  "experiencia": [
+    {
+      "id": "exp1",
+      "puesto": "Software Engineer (Freelance)",
+      "empresa": "Fenix Group",
+      "periodo": "2024",
+      "descripcion": "Developed full stack web applications using React, Flask, and Supabase. Designed scalable REST APIs and secure authentication systems.",
+      "logros": [
+        "Built end-to-end web applications with modern architecture",
+        "Designed scalable REST APIs for web platforms",
+        "Implemented secure JWT-based authentication systems",
+        "Designed and managed PostgreSQL databases"
+      ],
+      "tecnologias": ["React", "Flask", "Python", "Supabase", "PostgreSQL", "JWT"],
+      "hotspots": [
+        {
+          "id": "hs1",
+          "titulo": "REST APIs",
+          "descripcion": "Designed and implemented scalable APIs with Flask and JWT authentication",
+          "icono": "code",
+          "posicion": { "x": 20, "y": 30 }
+        },
+        {
+          "id": "hs2",
+          "titulo": "JWT Authentication",
+          "descripcion": "Secure authentication flow with access and refresh tokens",
+          "icono": "shield",
+          "posicion": { "x": 60, "y": 45 }
+        }
+      ]
+    },
+    {
+      "id": "exp2",
+      "puesto": "Software Engineer (Freelance)",
+      "empresa": "Sean LeCreatif",
+      "periodo": "2024",
+      "descripcion": "Built web applications and internal tools. Delivered modern React interfaces and integrated backend APIs and systems.",
+      "logros": [
+        "Developed web apps with modern user interfaces",
+        "Implemented core frontend features with React",
+        "Integrated APIs and backend services",
+        "Built internal tools to optimize operational workflows"
+      ],
+      "tecnologias": ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+      "hotspots": [
+        {
+          "id": "hs3",
+          "titulo": "Modern Interfaces",
+          "descripcion": "Built responsive and optimized UIs with React",
+          "icono": "layout",
+          "posicion": { "x": 40, "y": 50 }
+        }
+      ]
+    },
+    {
+      "id": "exp3",
+      "puesto": "Software Engineer (Freelance)",
+      "empresa": "AlphaDev",
+      "periodo": "2024",
+      "descripcion": "Built full stack applications, designed backend architecture, managed databases, and implemented scalable features.",
+      "logros": [
+        "Delivered complete full stack applications",
+        "Designed robust backend architecture",
+        "Managed PostgreSQL databases efficiently",
+        "Implemented scalable web application features"
+      ],
+      "tecnologias": ["Python", "Flask", "React", "PostgreSQL", "SQLAlchemy"],
+      "hotspots": [
+        {
+          "id": "hs4",
+          "titulo": "Backend Architecture",
+          "descripcion": "Designed scalable backend systems with Flask and PostgreSQL",
+          "icono": "server",
+          "posicion": { "x": 25, "y": 35 }
+        }
+      ]
+    },
+    {
+      "id": "exp4",
+      "puesto": "Mentor",
+      "empresa": "4Geeks Academy",
+      "periodo": "2024",
+      "descripcion": "Mentored students in Full Stack development. Supported debugging, project architecture, and software engineering best practices.",
+      "logros": [
+        "Mentored multiple students in Full Stack development",
+        "Supported debugging and complex issue resolution",
+        "Taught project architecture and design patterns",
+        "Guided app development with React, Flask, and REST APIs"
+      ],
+      "tecnologias": ["React", "Flask", "Python", "JavaScript", "REST APIs"],
+      "hotspots": [
+        {
+          "id": "hs5",
+          "titulo": "Technical Mentorship",
+          "descripcion": "Guided students on best practices and development patterns",
+          "icono": "users",
+          "posicion": { "x": 55, "y": 40 }
+        }
+      ]
+    },
+    {
+      "id": "exp5",
+      "puesto": "Lead Technician",
+      "empresa": "Wiring Technologie Inc",
+      "periodo": "2020 - 2024",
+      "ubicacion": "Orlando, United States",
+      "descripcion": "Designed and deployed telecommunications infrastructure, including fiber optics, coaxial systems, and structured cabling.",
+      "logros": [
+        "Designed and deployed end-to-end telecommunications infrastructure",
+        "Installed fiber optic and structured cabling systems",
+        "Configured MDF / IDF network rooms",
+        "Performed fiber testing with OTDR and fusion splicing equipment",
+        "Led technical field operations"
+      ],
+      "tecnologias": ["OTDR", "Fusion Splicing", "Cat5e/Cat6", "Fiber Optics", "MDF/IDF"],
+      "hotspots": [
+        {
+          "id": "hs6",
+          "titulo": "Network Infrastructure",
+          "descripcion": "Designed MDF/IDF rooms and structured cabling layouts",
+          "icono": "network",
+          "posicion": { "x": 30, "y": 55 }
+        },
+        {
+          "id": "hs7",
+          "titulo": "Fiber Optics",
+          "descripcion": "Performed OTDR testing and fusion splicing for fiber links",
+          "icono": "zap",
+          "posicion": { "x": 70, "y": 40 }
+        }
+      ]
+    }
+  ],
+  "educacion": [
+    {
+      "id": "edu1",
+      "titulo": "Full Stack Development Bootcamp",
+      "institucion": "4Geeks Academy",
+      "periodo": "2024",
+      "descripcion": "Intensive Full Stack training with React, Flask, Python, PostgreSQL, and REST APIs",
+      "destacado": true
+    },
+    {
+      "id": "edu2",
+      "titulo": "Telecommunications Infrastructure Training",
+      "institucion": "Professional Certification",
+      "periodo": "2020-2022",
+      "descripcion": "Specialization in fiber optics, OTDR testing, fusion splicing, and structured cabling"
+    }
+  ],
+  "certificaciones": [
+    {
+      "nombre": "Full Stack Development",
+      "emisor": "4Geeks Academy",
+      "año": "2024"
+    },
+    {
+      "nombre": "OTDR Testing & Fusion Splicing",
+      "emisor": "Professional Certification",
+      "año": "2022"
+    },
+    {
+      "nombre": "Structured Cabling (Cat5e/Cat6)",
+      "emisor": "Professional Certification",
+      "año": "2022"
+    }
+  ],
+  "habilidades": {
+    "frontend": [
+      { "nombre": "React.js", "nivel": 90, "años": 3 },
+      { "nombre": "JavaScript", "nivel": 90, "años": 3 },
+      { "nombre": "HTML5", "nivel": 95, "años": 3 },
+      { "nombre": "CSS3", "nivel": 90, "años": 3 },
+      { "nombre": "Bootstrap", "nivel": 85, "años": 3 }
+    ],
+    "backend": [
+      { "nombre": "Python", "nivel": 90, "años": 3 },
+      { "nombre": "Flask", "nivel": 90, "años": 3 },
+      { "nombre": "REST APIs", "nivel": 90, "años": 3 },
+      { "nombre": "JWT", "nivel": 85, "años": 3 },
+      { "nombre": "Supabase", "nivel": 85, "años": 3 }
+    ],
+    "databases": [
+      { "nombre": "PostgreSQL", "nivel": 90, "años": 3 },
+      { "nombre": "Supabase", "nivel": 85, "años": 3 },
+      { "nombre": "SQLAlchemy", "nivel": 85, "años": 3 },
+      { "nombre": "SQL", "nivel": 90, "años": 3 }
+    ],
+    "devops": [
+      { "nombre": "Git", "nivel": 90, "años": 3 },
+      { "nombre": "GitHub", "nivel": 90, "años": 3 },
+      { "nombre": "Jest", "nivel": 75, "años": 3 }
+    ],
+    "infraestructura": [
+      { "nombre": "Fiber Optics", "nivel": 95, "años": 7 },
+      { "nombre": "OTDR Testing", "nivel": 95, "años": 7 },
+      { "nombre": "Fusion Splicing", "nivel": 95, "años": 7 },
+      { "nombre": "Structured Cabling", "nivel": 95, "años": 7 },
+      { "nombre": "MDF / IDF", "nivel": 90, "años": 7 }
+    ],
+    "blandas": [
+      "Mentoring and teaching",
+      "Teamwork",
+      "Problem solving",
+      "Technical leadership",
+      "Effective communication",
+      "Project management"
+    ],
+    "idiomas": [
+      { "idioma": "Spanish", "nivel": "Fluent / Native" },
+      { "idioma": "English", "nivel": "Fluent / Professional" }
+    ]
+  },
+  "proyectos": [
+    {
+      "id": "proj1",
+      "nombre": "ATHENEA",
+      "descripcion": "Advanced management platform tailored to individual profiles. Modular system with React components and optimized state logic for dashboards and management software.",
+      "tecnologias": ["React", "JavaScript", "Modular State", "Reusable Components"],
+      "imagen": "/projects/athenea.jpg",
+      "url": "https://github.com/Gaboozc/ATHENEA/tree/single-person",
+      "destacado": true,
+      "hotspots": [
+        {
+          "id": "phs1",
+          "titulo": "Modular Architecture",
+          "descripcion": "Reusable component system with advanced state handling",
+          "icono": "layers",
+          "posicion": { "x": 30, "y": 40 }
+        }
+      ]
+    },
+    {
+      "id": "proj2",
+      "nombre": "Kzair Services",
+      "descripcion": "Conversion-focused landing page for industrial and technical services with integrated commercial strategy.",
+      "tecnologias": ["HTML5", "CSS3", "JavaScript", "Landing Page", "Conversion Optimization"],
+      "imagen": "/projects/kzair.jpg",
+      "url": "https://github.com/Gaboozc/Kzairservices",
+      "destacado": true
+    },
+    {
+      "id": "proj3",
+      "nombre": "CFNmx",
+      "descripcion": "Professional institutional portal with optimized information architecture for intuitive navigation and SEO.",
+      "tecnologias": ["HTML5", "CSS3", "SEO", "Information Architecture", "Corporate Website"],
+      "imagen": "/projects/cfnmx.jpg",
+      "url": "https://github.com/Gaboozc/CFNmx",
+      "hotspots": [
+        {
+          "id": "phs2",
+          "titulo": "SEO Structure",
+          "descripcion": "Complete content and structure optimization for search engines",
+          "icono": "database",
+          "posicion": { "x": 50, "y": 45 }
+        }
+      ]
+    },
+    {
+      "id": "proj4",
+      "nombre": "Barberia Imperial V2",
+      "descripcion": "Premium website focused on visual design and user experience, with strong branding and impactful UI.",
+      "tecnologias": ["HTML5", "CSS3", "JavaScript", "UI/UX", "Branding"],
+      "imagen": "/projects/barberia.jpg",
+      "url": "https://github.com/Gaboozc/barberiaImperialM/tree/mainV2"
+    },
+    {
+      "id": "proj5",
+      "nombre": "MoneyTracker",
+      "descripcion": "Personal finance app with advanced income and expense management, automatic categorization, and detailed reporting using the MERN stack.",
+      "tecnologias": ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
+      "imagen": "/projects/moneytracker.jpg",
+      "url": "https://github.com/Gaboozc/MoneyTracker",
+      "hotspots": [
+        {
+          "id": "phs3",
+          "titulo": "MERN Architecture",
+          "descripcion": "End-to-end stack with MongoDB persistence and Express/Node backend",
+          "icono": "bar-chart",
+          "posicion": { "x": 40, "y": 50 }
+        }
+      ]
+    }
+  ]
+}

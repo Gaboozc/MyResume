@@ -1,10 +1,19 @@
 'use client';
 
 import MagazinePage from '@/components/MagazinePage';
-import cvData from '@/data/cv-data.json';
-import Image from 'next/image';
+import cvDataEs from '@/data/cv-data.json';
+import cvDataEn from '@/data/cv-data-en.json';
+import { useMagazineStore } from '@/store/magazineStore';
+
+function useLocalizedCvData() {
+  const { language } = useMagazineStore();
+  const cvData = language === 'es' ? cvDataEs : cvDataEn;
+
+  return { language, cvData };
+}
 
 export function CoverPage() {
+  const { language, cvData } = useLocalizedCvData();
   const techLogos = [
     { 
       name: 'React', 
@@ -86,7 +95,7 @@ export function CoverPage() {
           </p>
         </div>
 
-        {/* Logos de tecnologías */}
+        {/* Technology logos */}
         <div className="flex items-center justify-center gap-5" style={{ maxWidth: '560px', margin: '0 auto' }}>
           {techLogos.map((tech, idx) => (
             <div 
@@ -116,11 +125,11 @@ export function CoverPage() {
           ))}
         </div>
 
-        {/* Footer con ubicación e instrucción */}
+        {/* Footer with location and hint */}
         <div className="flex items-center justify-between text-sm text-slate-600 pt-4 border-t border-slate-200/50">
           <span>{cvData.personal.ubicacion}</span>
           <span className="flex items-center gap-1">
-            Voltea la página para comenzar 
+            {language === 'es' ? 'Voltea la pagina para comenzar' : 'Flip the page to begin'}
             <span className="inline-block animate-bounce">→</span>
           </span>
         </div>
@@ -130,11 +139,13 @@ export function CoverPage() {
 }
 
 export function IntroPage() {
+  const { language, cvData } = useLocalizedCvData();
+
   return (
     <MagazinePage
       pageNumber={2}
-      title="Sobre Mí"
-      subtitle="Pasión por la tecnología y la innovación"
+      title={language === 'es' ? 'Sobre Mi' : 'About Me'}
+      subtitle={language === 'es' ? 'Pasion por la tecnologia y la innovacion' : 'Passion for technology and innovation'}
       theme="light"
       columns={2}
     >
@@ -144,22 +155,23 @@ export function IntroPage() {
           {cvData.personal.descripcion}
         </p>
         <p>
-          Con sede en {cvData.personal.ubicacion}, me especializo en crear 
-          experiencias digitales que no solo cumplen con los requisitos técnicos, 
-          sino que superan las expectativas de los usuarios.
+          {language === 'es'
+            ? `Con sede en ${cvData.personal.ubicacion}, me especializo en crear experiencias digitales que no solo cumplen con los requisitos tecnicos, sino que superan las expectativas de los usuarios.`
+            : `Based in ${cvData.personal.ubicacion}, I specialize in building digital experiences that not only meet technical requirements, but also exceed user expectations.`}
         </p>
         <p>
-          Mi enfoque combina diseño moderno, código limpio y las mejores prácticas 
-          de la industria para entregar proyectos que realmente hacen la diferencia.
+          {language === 'es'
+            ? 'Mi enfoque combina diseno moderno, codigo limpio y las mejores practicas de la industria para entregar proyectos que realmente hacen la diferencia.'
+            : 'My approach combines modern design, clean code, and industry best practices to deliver projects that make a real impact.'}
         </p>
       </div>
 
       <div className="mt-8 p-6 bg-white/50 rounded-lg border-l-4 border-blue-600">
-        <h3 className="font-bold text-xl mb-4">Datos de Contacto</h3>
+        <h3 className="font-bold text-xl mb-4">{language === 'es' ? 'Datos de Contacto' : 'Contact Details'}</h3>
         <div className="space-y-2 text-sm">
           <p><strong>Email:</strong> {cvData.personal.email}</p>
-          <p><strong>Teléfono:</strong> {cvData.personal.telefono}</p>
-          <p><strong>Ubicación:</strong> {cvData.personal.ubicacion}</p>
+          <p><strong>{language === 'es' ? 'Telefono' : 'Phone'}:</strong> {cvData.personal.telefono}</p>
+          <p><strong>{language === 'es' ? 'Ubicacion' : 'Location'}:</strong> {cvData.personal.ubicacion}</p>
         </div>
       </div>
     </MagazinePage>
@@ -167,13 +179,14 @@ export function IntroPage() {
 }
 
 export function ExperiencePage1() {
+  const { language, cvData } = useLocalizedCvData();
   const exp = cvData.experiencia[0];
   
   return (
     <MagazinePage
       pageNumber={3}
-      title="Experiencia"
-      subtitle="Trayectoria Profesional"
+      title={language === 'es' ? 'Experiencia' : 'Experience'}
+      subtitle={language === 'es' ? 'Trayectoria Profesional' : 'Professional Journey'}
       theme="colored"
       hotspots={exp.hotspots}
       columns={2}
@@ -188,7 +201,7 @@ export function ExperiencePage1() {
         </p>
 
         <div className="bg-white/70 p-4 rounded-lg">
-          <h4 className="font-bold mb-3">Logros Destacados:</h4>
+          <h4 className="font-bold mb-3">{language === 'es' ? 'Logros Destacados:' : 'Key Achievements:'}</h4>
           <ul className="space-y-2">
             {exp.logros.map((logro, idx) => (
               <li key={idx} className="flex gap-2">
@@ -202,7 +215,7 @@ export function ExperiencePage1() {
 
       <div className="break-inside-avoid">
         <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-6 rounded-lg">
-          <h4 className="font-bold mb-4 text-lg">Stack Tecnológico</h4>
+          <h4 className="font-bold mb-4 text-lg">{language === 'es' ? 'Stack Tecnologico' : 'Technology Stack'}</h4>
           <div className="flex flex-wrap gap-2">
             {exp.tecnologias.map((tech) => (
               <span key={tech} className="bg-white/20 px-3 py-1 rounded-full text-sm">
@@ -214,8 +227,9 @@ export function ExperiencePage1() {
 
         <div className="mt-6 p-4 bg-yellow-100 border-l-4 border-yellow-600 rounded">
           <p className="text-sm">
-            💡 <strong>Tip:</strong> Haz clic en los puntos brillantes para ver 
-            detalles técnicos de proyectos específicos.
+            {language === 'es'
+              ? '💡 Tip: Haz clic en los puntos brillantes para ver detalles tecnicos de proyectos especificos.'
+              : '💡 Tip: Click the bright points to see technical details for specific projects.'}
           </p>
         </div>
       </div>
@@ -224,6 +238,7 @@ export function ExperiencePage1() {
 }
 
 export function ExperiencePage2() {
+  const { language, cvData } = useLocalizedCvData();
   const exp = cvData.experiencia[1];
   
   return (
@@ -243,7 +258,7 @@ export function ExperiencePage2() {
         </p>
 
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-          <h4 className="font-bold mb-3">Logros Clave:</h4>
+          <h4 className="font-bold mb-3">{language === 'es' ? 'Logros Clave:' : 'Key Results:'}</h4>
           <ul className="space-y-2 text-sm">
             {exp.logros.map((logro, idx) => (
               <li key={idx} className="flex gap-2">
@@ -257,7 +272,7 @@ export function ExperiencePage2() {
 
       <div className="break-inside-avoid">
         <div className="bg-gradient-to-br from-green-500 to-teal-500 text-white p-6 rounded-lg">
-          <h4 className="font-bold mb-4">Tecnologías</h4>
+          <h4 className="font-bold mb-4">{language === 'es' ? 'Tecnologias' : 'Technologies'}</h4>
           <div className="grid grid-cols-2 gap-2">
             {exp.tecnologias.map((tech) => (
               <div key={tech} className="bg-white/20 px-3 py-2 rounded text-center text-sm">
@@ -272,11 +287,13 @@ export function ExperiencePage2() {
 }
 
 export function EducationPage() {
+  const { language, cvData } = useLocalizedCvData();
+
   return (
     <MagazinePage
       pageNumber={9}
-      title="Educación"
-      subtitle="Formación Académica y Certificaciones"
+      title={language === 'es' ? 'Educacion' : 'Education'}
+      subtitle={language === 'es' ? 'Formacion Academica y Certificaciones' : 'Academic Background and Certifications'}
       theme="light"
       columns={1}
     >
@@ -298,7 +315,7 @@ export function EducationPage() {
         ))}
 
         <div className="mt-8">
-          <h3 className="text-2xl font-bold mb-4">Certificaciones</h3>
+          <h3 className="text-2xl font-bold mb-4">{language === 'es' ? 'Certificaciones' : 'Certifications'}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {cvData.certificaciones.map((cert, idx) => (
               <div key={idx} className="bg-white p-4 rounded-lg border border-gray-300 shadow">
@@ -315,6 +332,7 @@ export function EducationPage() {
 }
 
 export function ExperiencePage3() {
+  const { language, cvData } = useLocalizedCvData();
   const exp = cvData.experiencia[2];
   
   return (
@@ -334,7 +352,7 @@ export function ExperiencePage3() {
         </p>
 
         <div className="bg-white/70 p-4 rounded-lg">
-          <h4 className="font-bold mb-3">Logros Destacados:</h4>
+          <h4 className="font-bold mb-3">{language === 'es' ? 'Logros Destacados:' : 'Key Achievements:'}</h4>
           <ul className="space-y-2">
             {exp.logros.map((logro, idx) => (
               <li key={idx} className="flex gap-2">
@@ -348,7 +366,7 @@ export function ExperiencePage3() {
 
       <div className="break-inside-avoid">
         <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white p-6 rounded-lg">
-          <h4 className="font-bold mb-4 text-lg">Stack Tecnológico</h4>
+          <h4 className="font-bold mb-4 text-lg">{language === 'es' ? 'Stack Tecnologico' : 'Technology Stack'}</h4>
           <div className="flex flex-wrap gap-2">
             {exp.tecnologias.map((tech) => (
               <span key={tech} className="bg-white/20 px-3 py-1 rounded-full text-sm">
@@ -363,6 +381,7 @@ export function ExperiencePage3() {
 }
 
 export function ExperiencePage4() {
+  const { language, cvData } = useLocalizedCvData();
   const exp = cvData.experiencia[3];
   
   return (
@@ -382,7 +401,7 @@ export function ExperiencePage4() {
         </p>
 
         <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-lg border-2 border-green-300">
-          <h4 className="font-bold mb-3 text-green-700">Responsabilidades:</h4>
+          <h4 className="font-bold mb-3 text-green-700">{language === 'es' ? 'Responsabilidades:' : 'Responsibilities:'}</h4>
           <ul className="space-y-2 text-sm">
             {exp.logros.map((logro, idx) => (
               <li key={idx} className="flex gap-2">
@@ -396,7 +415,7 @@ export function ExperiencePage4() {
 
       <div className="break-inside-avoid">
         <div className="bg-gradient-to-br from-green-500 to-teal-500 text-white p-6 rounded-lg">
-          <h4 className="font-bold mb-4">Tecnologías</h4>
+          <h4 className="font-bold mb-4">{language === 'es' ? 'Tecnologias' : 'Technologies'}</h4>
           <div className="flex flex-wrap gap-2">
             {exp.tecnologias.map((tech) => (
               <span key={tech} className="bg-white/20 px-3 py-1 rounded text-sm">
@@ -411,6 +430,7 @@ export function ExperiencePage4() {
 }
 
 export function ExperiencePage5() {
+  const { language, cvData } = useLocalizedCvData();
   const exp = cvData.experiencia[4];
   
   return (
@@ -431,7 +451,7 @@ export function ExperiencePage5() {
         </p>
 
         <div className="bg-white/10 backdrop-blur p-4 rounded-lg border border-white/20">
-          <h4 className="font-bold mb-3">Logros Técnicos:</h4>
+          <h4 className="font-bold mb-3">{language === 'es' ? 'Logros Tecnicos:' : 'Technical Achievements:'}</h4>
           <ul className="space-y-2 text-sm">
             {exp.logros.map((logro, idx) => (
               <li key={idx} className="flex gap-2">
@@ -445,7 +465,7 @@ export function ExperiencePage5() {
 
       <div className="break-inside-avoid">
         <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white p-6 rounded-lg">
-          <h4 className="font-bold mb-4 text-lg">Tecnologías de Infraestructura</h4>
+          <h4 className="font-bold mb-4 text-lg">{language === 'es' ? 'Tecnologias de Infraestructura' : 'Infrastructure Technologies'}</h4>
           <div className="flex flex-wrap gap-2">
             {exp.tecnologias.map((tech) => (
               <span key={tech} className="bg-white/20 px-3 py-1 rounded-full text-sm">
@@ -457,8 +477,9 @@ export function ExperiencePage5() {
 
         <div className="mt-6 p-4 bg-yellow-500/20 border-l-4 border-yellow-400 rounded">
           <p className="text-sm">
-            💡 <strong>Nota:</strong> Esta experiencia combina habilidades técnicas 
-            de infraestructura física con conocimiento en redes y telecomunicaciones.
+            {language === 'es'
+              ? '💡 Nota: Esta experiencia combina habilidades tecnicas de infraestructura fisica con conocimiento en redes y telecomunicaciones.'
+              : '💡 Note: This experience combines physical infrastructure expertise with networking and telecommunications knowledge.'}
           </p>
         </div>
       </div>

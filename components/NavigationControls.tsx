@@ -7,7 +7,7 @@ import { useMagazineStore } from '@/store/magazineStore';
 import { useSwipeable } from 'react-swipeable';
 
 export default function NavigationControls() {
-  const { currentPage, totalPages, nextPage, prevPage, isFlipping } = useMagazineStore();
+  const { currentPage, totalPages, nextPage, prevPage, isFlipping, language } = useMagazineStore();
 
   // Keyboard navigation
   useEffect(() => {
@@ -84,7 +84,11 @@ export default function NavigationControls() {
                    bg-white/90 text-gray-700 px-4 py-2 rounded-lg shadow-lg text-sm
                    hidden sm:block"
       >
-        <p>Usa ← → para navegar | Desliza en móvil</p>
+        <p>
+          {language === 'es'
+            ? 'Usa ← → para navegar | Desliza en movil'
+            : 'Use ← → to navigate | Swipe on mobile'}
+        </p>
       </motion.div>
     </div>
   );

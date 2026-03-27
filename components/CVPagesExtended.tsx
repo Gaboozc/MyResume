@@ -1,14 +1,25 @@
 'use client';
 
 import MagazinePage from '@/components/MagazinePage';
-import cvData from '@/data/cv-data.json';
+import cvDataEs from '@/data/cv-data.json';
+import cvDataEn from '@/data/cv-data-en.json';
+import { useMagazineStore } from '@/store/magazineStore';
+
+function useLocalizedCvData() {
+  const { language } = useMagazineStore();
+  const cvData = language === 'es' ? cvDataEs : cvDataEn;
+
+  return { language, cvData };
+}
 
 export function SkillsPage() {
+  const { language, cvData } = useLocalizedCvData();
+
   return (
     <MagazinePage
       pageNumber={8}
-      title="Habilidades"
-      subtitle="Competencias Tecnicas I"
+      title={language === 'es' ? 'Habilidades' : 'Skills'}
+      subtitle={language === 'es' ? 'Competencias Tecnicas I' : 'Technical Competencies I'}
       theme="colored"
       columns={2}
     >
@@ -20,7 +31,7 @@ export function SkillsPage() {
               <div key={skill.nombre} className="break-inside-avoid">
                 <div className="flex justify-between mb-1">
                   <span className="font-semibold">{skill.nombre}</span>
-                  <span className="text-sm text-gray-600">{skill.años} años</span>
+                  <span className="text-sm text-gray-600">{skill.años} {language === 'es' ? 'anos' : 'years'}</span>
                 </div>
                 <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                   <div
@@ -41,7 +52,7 @@ export function SkillsPage() {
               <div key={skill.nombre}>
                 <div className="flex justify-between mb-1">
                   <span className="font-semibold">{skill.nombre}</span>
-                  <span className="text-sm text-gray-600">{skill.años} años</span>
+                  <span className="text-sm text-gray-600">{skill.años} {language === 'es' ? 'anos' : 'years'}</span>
                 </div>
                 <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                   <div
@@ -57,13 +68,13 @@ export function SkillsPage() {
 
       <div className="space-y-4">
         <section className="break-inside-avoid">
-          <h3 className="text-2xl font-bold mb-4 text-purple-600">Bases de Datos</h3>
+          <h3 className="text-2xl font-bold mb-4 text-purple-600">{language === 'es' ? 'Bases de Datos' : 'Databases'}</h3>
           <div className="space-y-3">
             {cvData.habilidades.databases.map((skill) => (
               <div key={skill.nombre}>
                 <div className="flex justify-between mb-1">
                   <span className="font-semibold">{skill.nombre}</span>
-                  <span className="text-sm text-gray-600">{skill.años} años</span>
+                  <span className="text-sm text-gray-600">{skill.años} {language === 'es' ? 'anos' : 'years'}</span>
                 </div>
                 <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                   <div
@@ -77,10 +88,11 @@ export function SkillsPage() {
         </section>
 
         <section className="break-inside-avoid bg-white/60 p-4 rounded-lg border border-purple-100">
-          <h3 className="text-xl font-bold mb-2 text-purple-700">Resumen</h3>
+          <h3 className="text-xl font-bold mb-2 text-purple-700">{language === 'es' ? 'Resumen' : 'Summary'}</h3>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Esta hoja concentra las habilidades de desarrollo de software: frontend,
-            backend y bases de datos.
+            {language === 'es'
+              ? 'Esta hoja concentra las habilidades de desarrollo de software: frontend, backend y bases de datos.'
+              : 'This page summarizes software development skills across frontend, backend, and databases.'}
           </p>
         </section>
       </div>
@@ -90,23 +102,25 @@ export function SkillsPage() {
 }
 
 export function SkillsPage2() {
+  const { language, cvData } = useLocalizedCvData();
+
   return (
     <MagazinePage
       pageNumber={9}
-      title="Habilidades"
-      subtitle="Competencias Tecnicas II"
+      title={language === 'es' ? 'Habilidades' : 'Skills'}
+      subtitle={language === 'es' ? 'Competencias Tecnicas II' : 'Technical Competencies II'}
       theme="colored"
       columns={2}
     >
       <div className="space-y-4">
         <section className="break-inside-avoid">
-          <h3 className="text-2xl font-bold mb-4 text-orange-600">DevOps & Herramientas</h3>
+          <h3 className="text-2xl font-bold mb-4 text-orange-600">{language === 'es' ? 'DevOps y Herramientas' : 'DevOps & Tools'}</h3>
           <div className="space-y-3">
             {cvData.habilidades.devops.map((skill) => (
               <div key={skill.nombre}>
                 <div className="flex justify-between mb-1">
                   <span className="font-semibold">{skill.nombre}</span>
-                  <span className="text-sm text-gray-600">{skill.años} años</span>
+                  <span className="text-sm text-gray-600">{skill.años} {language === 'es' ? 'anos' : 'years'}</span>
                 </div>
                 <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                   <div
@@ -122,13 +136,13 @@ export function SkillsPage2() {
 
       <div className="space-y-4">
         <section className="break-inside-avoid">
-          <h3 className="text-2xl font-bold mb-4 text-cyan-600">Infraestructura & Telecomunicaciones</h3>
+          <h3 className="text-2xl font-bold mb-4 text-cyan-600">{language === 'es' ? 'Infraestructura y Telecomunicaciones' : 'Infrastructure & Telecommunications'}</h3>
           <div className="space-y-3">
             {cvData.habilidades.infraestructura.map((skill) => (
               <div key={skill.nombre}>
                 <div className="flex justify-between mb-1">
                   <span className="font-semibold">{skill.nombre}</span>
-                  <span className="text-sm text-gray-600">{skill.años} años</span>
+                  <span className="text-sm text-gray-600">{skill.años} {language === 'es' ? 'anos' : 'years'}</span>
                 </div>
                 <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                   <div
@@ -142,7 +156,7 @@ export function SkillsPage2() {
         </section>
 
         <section className="break-inside-avoid bg-white/50 p-4 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Habilidades Blandas</h3>
+          <h3 className="text-2xl font-bold mb-4">{language === 'es' ? 'Habilidades Blandas' : 'Soft Skills'}</h3>
           <ul className="space-y-2">
             {cvData.habilidades.blandas.map((skill, idx) => (
               <li key={idx} className="flex items-center gap-2">
@@ -154,7 +168,7 @@ export function SkillsPage2() {
         </section>
 
         <section className="break-inside-avoid bg-gradient-to-br from-blue-500 to-purple-500 text-white p-4 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Idiomas</h3>
+          <h3 className="text-2xl font-bold mb-4">{language === 'es' ? 'Idiomas' : 'Languages'}</h3>
           <ul className="space-y-2">
             {cvData.habilidades.idiomas.map((idioma, idx) => (
               <li key={idx} className="flex items-center justify-between">
@@ -170,13 +184,14 @@ export function SkillsPage2() {
 }
 
 export function ProjectsPage1() {
+  const { language, cvData } = useLocalizedCvData();
   const featuredProject = cvData.proyectos[0];
 
   return (
     <MagazinePage
       pageNumber={10}
-      title="Proyectos"
-      subtitle="Portfolio de Trabajos Destacados"
+      title={language === 'es' ? 'Proyectos' : 'Projects'}
+      subtitle={language === 'es' ? 'Portfolio de Trabajos Destacados' : 'Featured Work Portfolio'}
       theme="dark"
       hotspots={featuredProject.hotspots}
       columns={1}
@@ -186,7 +201,7 @@ export function ProjectsPage1() {
           <div className="flex items-start justify-between mb-4">
             <h2 className="text-4xl font-bold">{featuredProject.nombre}</h2>
             <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
-              ⭐ Destacado
+              {language === 'es' ? '⭐ Destacado' : '⭐ Featured'}
             </span>
           </div>
           <p className="text-xl mb-6 opacity-90">{featuredProject.descripcion}</p>
@@ -210,7 +225,7 @@ export function ProjectsPage1() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-white text-gray-900 px-5 py-2.5 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
-                Ver Proyecto →
+                {language === 'es' ? 'Ver Proyecto →' : 'View Project →'}
               </a>
             )}
             <a
@@ -219,21 +234,23 @@ export function ProjectsPage1() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-black/20 border border-white/35 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-black/30 transition-colors"
             >
-              Ver GitHub
+              {language === 'es' ? 'Ver GitHub' : 'View GitHub'}
             </a>
           </div>
         </div>
 
         <div className="bg-white/10 p-6 rounded-xl backdrop-blur border border-white/20">
-          <h3 className="text-xl font-bold mb-4">Detalle del Proyecto</h3>
+          <h3 className="text-xl font-bold mb-4">{language === 'es' ? 'Detalle del Proyecto' : 'Project Detail'}</h3>
           <div className="space-y-3 text-white/90 leading-relaxed">
             <p>
-              Plataforma diseñada con arquitectura modular y componentes reutilizables,
-              permitiendo adaptación rápida a diferentes necesidades de gestión.
+              {language === 'es'
+                ? 'Plataforma disenada con arquitectura modular y componentes reutilizables, permitiendo adaptacion rapida a diferentes necesidades de gestion.'
+                : 'Platform designed with modular architecture and reusable components, enabling fast adaptation to different management needs.'}
             </p>
             <p>
-              Sistema de estado optimizado para dashboards interactivos y flujos de trabajo
-              complejos, enfocado en escalabilidad y mantenibilidad del código.
+              {language === 'es'
+                ? 'Sistema de estado optimizado para dashboards interactivos y flujos de trabajo complejos, enfocado en escalabilidad y mantenibilidad del codigo.'
+                : 'Optimized state system for interactive dashboards and complex workflows, focused on scalability and maintainable code.'}
             </p>
           </div>
         </div>
@@ -243,6 +260,7 @@ export function ProjectsPage1() {
 }
 
 export function ProjectsPage2() {
+  const { language, cvData } = useLocalizedCvData();
   const otherProjects = cvData.proyectos.slice(1);
 
   return (
@@ -279,7 +297,7 @@ export function ProjectsPage2() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Ver más →
+                {language === 'es' ? 'Ver mas →' : 'View more →'}
               </a>
             )}
           </article>
@@ -289,10 +307,11 @@ export function ProjectsPage2() {
       <div className="break-inside-avoid">
         <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white 
                      p-8 rounded-lg h-full flex flex-col justify-center">
-          <h3 className="text-3xl font-bold mb-4">Más Proyectos</h3>
+          <h3 className="text-3xl font-bold mb-4">{language === 'es' ? 'Mas Proyectos' : 'More Projects'}</h3>
           <p className="text-lg mb-6 opacity-90">
-            ¿Quieres ver más trabajos? Visita mi GitHub para explorar el código 
-            fuente de estos y otros proyectos open source.
+            {language === 'es'
+              ? 'Quieres ver mas trabajos? Visita mi GitHub para explorar el codigo fuente de estos y otros proyectos open source.'
+              : 'Want to see more work? Visit my GitHub to explore the source code for these and other open source projects.'}
           </p>
           <a
             href={cvData.personal.github}
@@ -301,7 +320,7 @@ export function ProjectsPage2() {
             className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg 
                      font-bold hover:bg-gray-100 transition-colors text-center"
           >
-            Ver GitHub →
+            {language === 'es' ? 'Ver GitHub →' : 'View GitHub →'}
           </a>
         </div>
       </div>
@@ -310,19 +329,22 @@ export function ProjectsPage2() {
 }
 
 export function ContactPage() {
+  const { language, cvData } = useLocalizedCvData();
+
   return (
     <MagazinePage
       pageNumber={12}
-      title="Contacto"
-      subtitle="Trabajemos Juntos"
+      title={language === 'es' ? 'Contacto' : 'Contact'}
+      subtitle={language === 'es' ? 'Trabajemos Juntos' : "Let's Work Together"}
       theme="colored"
       columns={1}
     >
       <div className="max-w-2xl mx-auto space-y-8">
         <div className="text-center">
           <p className="text-xl leading-relaxed">
-            ¿Tienes un proyecto en mente? ¿Buscas un desarrollador para tu equipo? 
-            ¡Me encantaría escuchar de ti!
+            {language === 'es'
+              ? 'Tienes un proyecto en mente? Buscas un desarrollador para tu equipo? Me encantaria escuchar de ti!'
+              : "Do you have a project in mind? Looking for a developer for your team? I'd love to hear from you!"}
           </p>
         </div>
 
@@ -355,7 +377,7 @@ export function ContactPage() {
                      p-6 rounded-lg hover:shadow-xl transition-all group col-span-2"
           >
             <div className="text-4xl mb-2 text-center">📱</div>
-            <h3 className="font-bold text-xl mb-2 text-center">Teléfono</h3>
+            <h3 className="font-bold text-xl mb-2 text-center">{language === 'es' ? 'Telefono' : 'Phone'}</h3>
             <p className="group-hover:underline text-center">{cvData.personal.telefono}</p>
           </a>
         </div>
@@ -370,6 +392,8 @@ export function ContactPage() {
 }
 
 export function BackCoverPage() {
+  const { language, cvData } = useLocalizedCvData();
+
   return (
     <div className="relative w-full h-full overflow-hidden text-slate-900">
       <div className="absolute inset-0 bg-gradient-to-tr from-amber-50 via-white to-blue-50" />
@@ -395,8 +419,10 @@ export function BackCoverPage() {
         <div />
 
         <div className="max-w-3xl mx-auto space-y-7">
-          <h2 className="text-5xl md:text-6xl font-black">Gracias</h2>
-          <p className="text-2xl text-slate-700">por revisar mi portfolio</p>
+          <h2 className="text-5xl md:text-6xl font-black">{language === 'es' ? 'Gracias' : 'Thank You'}</h2>
+          <p className="text-2xl text-slate-700">
+            {language === 'es' ? 'por revisar mi portfolio' : 'for reviewing my portfolio'}
+          </p>
 
           <div className="pt-4 space-y-4">
             <p className="text-base uppercase tracking-[0.16em] text-slate-600">Stack</p>

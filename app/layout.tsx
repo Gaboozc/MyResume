@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LanguageToggle from '@/components/LanguageToggle';
 
 export const metadata: Metadata = {
-  title: "Portfolio 3D - CV Interactivo",
-  description: "Portfolio interactivo con efecto de revista 3D y navegación inmersiva",
+  title: "3D Portfolio - Interactive Resume",
+  description: "Interactive portfolio with a 3D magazine effect and immersive navigation",
 };
 
 export default function RootLayout({
@@ -12,8 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body className="min-h-screen antialiased">
+        <LanguageToggle />
         {children}
       </body>
     </html>

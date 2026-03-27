@@ -7,15 +7,15 @@ import {
 import { useMagazineStore } from '@/store/magazineStore';
 
 const tabs = [
-  { id: 'inicio', label: 'Inicio', icon: Home, page: 0, color: 'bg-red-600' },
-  { id: 'experiencia', label: 'Experiencia', icon: Briefcase, page: 2, color: 'bg-blue-600' },
-  { id: 'habilidades', label: 'Skills', icon: Wrench, page: 7, color: 'bg-yellow-600' },
-  { id: 'proyectos', label: 'Proyectos', icon: FolderOpen, page: 9, color: 'bg-purple-600' },
-  { id: 'contacto', label: 'Contacto', icon: Mail, page: 11, color: 'bg-pink-600' },
+  { id: 'inicio', label: { en: 'Home', es: 'Inicio' }, icon: Home, page: 0, color: 'bg-red-600' },
+  { id: 'experiencia', label: { en: 'Experience', es: 'Experiencia' }, icon: Briefcase, page: 2, color: 'bg-blue-600' },
+  { id: 'habilidades', label: { en: 'Skills', es: 'Habilidades' }, icon: Wrench, page: 7, color: 'bg-yellow-600' },
+  { id: 'proyectos', label: { en: 'Projects', es: 'Proyectos' }, icon: FolderOpen, page: 9, color: 'bg-purple-600' },
+  { id: 'contacto', label: { en: 'Contact', es: 'Contacto' }, icon: Mail, page: 11, color: 'bg-pink-600' },
 ];
 
 export default function TabSystem() {
-  const { activeTab, goToPage, setActiveTab } = useMagazineStore();
+  const { activeTab, goToPage, setActiveTab, language } = useMagazineStore();
 
   const handleTabClick = (tab: typeof tabs[0]) => {
     setActiveTab(tab.id);
@@ -56,7 +56,7 @@ export default function TabSystem() {
                 initial={{ x: 20 }}
                 whileHover={{ x: 0 }}
               >
-                {tab.label}
+                {tab.label[language]}
               </motion.span>
 
               {/* Icon */}
@@ -80,7 +80,7 @@ export default function TabSystem() {
       {/* Mobile hint */}
       <div className="mt-4 text-xs text-gray-600 text-center px-2 hidden xl:block">
         <p className="bg-white/90 rounded px-2 py-1 shadow">
-          Haz clic para navegar
+          {language === 'es' ? 'Haz clic para navegar' : 'Click to navigate'}
         </p>
       </div>
     </div>
